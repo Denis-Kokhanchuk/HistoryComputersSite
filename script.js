@@ -11,7 +11,7 @@ AOS.init({
 // ===== ТАЙПІНГ АНІМАЦІЯ =====
 const subtitle = document.getElementById('typing-subtitle');
 if (subtitle) {
-  const text = "Від шестерень до нейронних мереж";
+  const text = "From gears to neural networks";
   let i = 0;
   
   function typeWriter() {
