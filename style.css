@@ -245,10 +245,14 @@ body {
     transparent 80%,
     rgba(0,0,0,0.2) 100%);
   pointer-events: none;
-  .badge.near-top .left-ribbon-long,
-  .badge.near-top .right-ribbon-long {
+}
+
+.badge.near-top .left-ribbon-long,
+.badge.near-top .right-ribbon-long {
   display: block;
-  .badge-content {
+}
+
+.badge-content {
   padding: 35px 20px 20px;
   display: flex;
   flex-direction: column;
@@ -2550,3 +2554,93 @@ body {
   opacity: 0.5;
 }
 
+/* ===== ПОЧАТКОВІ СТАНИ ЕЛЕМЕНТІВ ===== */
+
+/* Бейдж - прихований */
+#badge {
+    display: none;
+}
+
+/* ENIAC секція */
+#eniac-info-screen {
+    display: none;
+    opacity: 0;
+}
+
+#eniac-info-screen.visible {
+    display: block;
+    opacity: 1;
+}
+
+#eniac-start-screen {
+    display: block;
+    opacity: 1;
+}
+
+/* Internet секція */
+#internet-info-screen {
+    display: none;
+    opacity: 0;
+}
+
+#internet-info-screen.visible {
+    display: block;
+    opacity: 1;
+}
+
+#internet-start-screen {
+    display: block;
+    opacity: 1;
+}
+
+/* Mobile секція */
+#mobile-info-screen {
+    display: none;
+    opacity: 0;
+}
+
+#mobile-info-screen.visible {
+    display: block;
+    opacity: 1;
+}
+
+#mobile-start-screen {
+    display: block;
+    opacity: 1;
+}
+
+/* AI секція */
+#ai-info-screen {
+    display: none;
+    opacity: 0;
+}
+
+#ai-info-screen.visible {
+    display: block;
+    opacity: 1;
+}
+
+#ai-start-screen {
+    display: block;
+    opacity: 1;
+}
+
+/* Модальні вікна */
+#pc-info-modal.hidden {
+    display: none;
+}
+
+#ai-creator-modal.hidden {
+    display: none;
+}
+
+/* Inventor info */
+.inventor-info {
+    display: none;
+    opacity: 0;
+}
+
+.inventor-info.visible {
+    display: block;
+    opacity: 1;
+}
