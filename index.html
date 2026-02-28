@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History of Computers · Interactive</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn active" data-lang="uk">УКР</button>
+    <span class="lang-separator">/</span>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <div class="sections">
+    <section id="hero" class="section hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="content">
+        <h1 class="main-title" data-aos="fade-up">The Evolution of Computers</h1>
+        <p class="subtitle" id="typing-subtitle"></p>
+        <button class="btn start-journey" data-aos="zoom-in" data-aos-delay="500">Start the Journey</button>
+        <div class="scroll-indicator"></div>
+      </div>
+    </section>
+
+    <section id="mechanical" class="section mechanical">
+      <div class="vintage-bg"></div>
+      <div class="container">
+        <h2 data-aos="fade-right">Mechanical Era (1822-1940)</h2>
+        <div class="portrait" data-aos="flip-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/600px-Charles_Babbage_-_1860.jpg" alt="Charles Babbage">
+        </div>
+        <div class="inventor-info" id="inventorInfo">
+          <h3>Charles Babbage</h3>
+          <p>"Father of the Computer"</p>
+        </div>
+        <button class="btn about-author" id="aboutAuthorBtn">About the Author</button>
+        
+        <div id="badge" class="badge">
+          <div class="ribbon-container left-ribbon-container">
+            <div class="ribbon-short left-ribbon-short"></div>
+          </div>
+          
+          <div class="ribbon-container right-ribbon-container">
+            <div class="ribbon-short right-ribbon-short"></div>
+          </div>
+          
+          <div class="badge-content">
+            <div class="badge-header">
+              <span class="badge-icon">⚙️</span>
+              <strong class="badge-title">ANALYTICAL ENGINE</strong>
+            </div>
+            <div class="badge-body">
+              <p class="badge-text">Charles Babbage (1791-1871)</p>
+              <p class="badge-description">English mathematician, inventor, and polymath known as the "father of computing" for designing the first mechanical calculators, the Difference Engine and the Analytical Engine.</p>
+              <div class="badge-footer">
+                <span class="badge-year">1837</span>
+                <span class="badge-location">London, UK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="eniac" class="section eniac">
+      <div class="dark-room"></div>
+      <div class="container">
+        <h2 data-aos="fade-up">ENIAC (1945)</h2>
+        
+        <div id="eniac-start-screen" class="eniac-start-screen">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ8ca-lT5oL8tpSGqx-uR7sFojr6UX3iAQYw&s" alt="ENIAC Computer" class="eniac-img" data-aos="zoom-in">
+          <div class="inventor-info start-info">
+            <h3>J. Presper Eckert & John Mauchly</h3>
+            <p>First general-purpose electronic digital computer • 17,468 vacuum tubes • 30 tons</p>
+          </div>
+          <button class="btn launch-eniac" id="launchEniacBtn">Launch ENIAC</button>
+          <div class="eniac-terminal" id="eniacTerminal"></div>
+        </div>
+        
+        <div id="eniac-info-screen" class="eniac-info-screen hidden">
+          <div class="eniac-layout">
+            <div class="eniac-left" data-aos="fade-right">
+              <div class="eniac-computer">
+                <img src="https://www.hnf.de/uploads/tx_templavoila/61_B.jpg" alt="ENIAC Computer" class="eniac-computer-img">
+                <h3 class="eniac-computer-title">ENIAC</h3>
+                <p class="eniac-computer-year">1945</p>
+              </div>
+            </div>
+            
+           <div class="eniac-right" data-aos="fade-left">
+             <div class="eniac-description">
+               <h3 class="description-title">The First Electronic Computer</h3>
+               <p class="description-text">
+                 ENIAC (Electronic Numerical Integrator and Computer) was the first programmable, 
+                 electronic, general-purpose digital computer. It was Turing-complete and could 
+                 solve a large class of numerical problems through reprogramming.
+               </p>
+               <div class="description-stats">
+                 <div class="stat-item">
+                   <span class="stat-label">Weight:</span>
+                   <span class="stat-value">30 tons</span>
+                 </div>
+                 <div class="stat-item">
+                   <span class="stat-label">Vacuum Tubes:</span>
+                   <span class="stat-value">17,468</span>
+                 </div>
+                 <div class="stat-item">
+                   <span class="stat-label">Power:</span>
+                   <span class="stat-value">150 kW</span>
+                 </div>
+                 <div class="stat-item">
+                   <span class="stat-label">Speed:</span>
+                   <span class="stat-value">100 kHz</span>
+                 </div>
+               </div>
+             </div>
+             
+              <a href="https://youtu.be/k4oGI_dNaPc?si=KpS_7MEPSqi6ej2l" target="_blank" class="video-link-button">
+                <span class="video-icon">▶</span>
+                <span class="video-text">Watch ENIAC Documentary</span>
+              </a>
+             
+             <div class="eniac-creators">
+               <h3 class="creators-title">Creators</h3>
+               <div class="creators-grid">
+                 <div class="creator-card">
+                   <img src="https://www.invent.org/sites/default/files/styles/inductee_media/public/inductees/181-master_0.jpg?h=754009f3" alt="J. Presper Eckert" class="creator-img">
+                   <h4 class="creator-name">J. Presper Eckert</h4>
+                   <p class="creator-years">1919-1995</p>
+                   <p class="creator-role">Co-inventor, Chief Engineer</p>
+                 </div>
+                 <div class="creator-card">
+                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1JEnv3ku2znU3AOp_aODelLrQIS0ouatXXA&s" alt="John Mauchly" class="creator-img">
+                   <h4 class="creator-name">John Mauchly</h4>
+                   <p class="creator-years">1907-1980</p>
+                   <p class="creator-role">Co-inventor, Principal Consultant</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="pc-revolution" class="section pc-revolution">
+       <div class="container">
+         <h2 data-aos="fade-down">PC Revolution (1970s-1980s)</h2>
+    
+        <div class="pc-split-layout">
+          <div class="pc-half left-half" data-aos="fade-right">
+            <div class="pc-half-content">
+              <div class="pc-computer-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6uBNyqgYouXwe3rL4yxsJdT8G4j4UFJWbyQ&s" alt="IBM PC">
+              </div>
+              
+              <h3 class="pc-computer-title">IBM PC</h3>
+              <p class="pc-computer-year">1981</p>
+              
+              <p class="pc-short-desc">The first IBM personal computer that set the industry standard</p>
+              
+              <button class="pc-info-btn" data-pc="ibm">
+                <span>More Info</span>
+              </button>
+              
+              <div class="pc-creator-mini">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI-jmpabExBPbHPIK3RKHafoJqgQJhqcsZHQ&s" alt="Don Estridge" class="creator-mini-img">
+                <div class="creator-mini-info">
+                  <h4>Don Estridge</h4>
+                  <p>"Father of IBM PC"</p>
+                </div>
+              </div>
+              
+              <a href="https://www.youtube.com/watch?v=_w-nK0z6JGM" target="_blank" class="pc-video-btn">
+                <span class="video-icon">▶</span>
+                <span>Watch Video</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="pc-half right-half" data-aos="fade-left">
+            <div class="pc-half-content">
+              <div class="pc-computer-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWqlNhAM2wRXBNZMHwQLene9WnuaGR33TL_g&s" alt="Apple II">
+              </div>
+              
+              <h3 class="pc-computer-title">Apple II</h3>
+              <p class="pc-computer-year">1977</p>
+              
+              <p class="pc-short-desc">One of the first highly successful mass-produced personal computers</p>
+              
+              <button class="pc-info-btn" data-pc="apple">
+                <span>More Info</span>
+              </button>
+              
+              <div class="pc-creator-mini">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt7s1W4N7vVNzNEwq36wdGOisFnIeGnPL0YA&s" alt="Steve Wozniak" class="creator-mini-img">
+                <div class="creator-mini-info">
+                  <h4>Steve Wozniak</h4>
+                  <p>Apple Co-founder</p>
+                </div>
+              </div>
+              
+              <a href="https://www.youtube.com/watch?v=CxJwy8NsXFs" target="_blank" class="pc-video-btn">
+                <span class="video-icon">▶</span>
+                <span>Watch Video</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+  
+        <div id="pc-info-modal" class="pc-modal hidden">
+          <div class="pc-modal-content">
+            <button class="pc-modal-close">&times;</button>
+            <div id="pc-modal-body" class="pc-modal-body"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="internet" class="section internet">
+        <div class="internet-bg">
+          <div class="globe-grid"></div>
+          <div class="data-streams"></div>
+        </div>
+        <div class="container">
+          <h2 data-aos="fade-up">Internet Era (1990s)</h2>
+          
+          <div id="internet-start-screen" class="internet-start-screen">
+            <div class="dialup-container">
+              <div class="dialup-modem">
+                <div class="modem-lights">
+                  <span class="light"></span>
+                  <span class="light"></span>
+                  <span class="light"></span>
+                  <span class="light"></span>
+                </div>
+              </div>
+              <div class="progress-bar" id="dialupProgress"></div>
+              <button class="btn connect" id="connectBtn">Connect to Internet</button>
+            </div>
+            <div class="dialup-soundwaves">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          
+          <div id="internet-info-screen" class="internet-info-screen hidden">
+            <div class="internet-showcase">
+              <div class="internet-left" data-aos="fade-right">
+                <div class="inventor-spotlight">
+                  <div class="inventor-photo-frame">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv607Zy3bNJKlLcPK2eTuSgipH12Nfo6FgZQ&s" alt="Tim Berners-Lee" class="inventor-photo">
+                    <div class="photo-glow"></div>
+                  </div>
+                  <h3 class="inventor-name">Tim Berners-Lee</h3>
+                  <p class="inventor-title">Inventor of the World Wide Web</p>
+                  <p class="inventor-years">1955 - present</p>
+                </div>
+                
+                <div class="invention-story">
+                  <h4>The Story Behind the Web</h4>
+                  <p>In 1989, while working at CERN, Tim Berners-Lee proposed a system to manage information using "hypertext" - a way to link documents across different computers. His vision was to create a universal information space where anyone could share and access knowledge.</p>
+                  <p>The first website was built at CERN and went live on August 6, 1991. It explained what the World Wide Web was and how to create your own web pages.</p>
+                </div>
+              </div>
+              
+              <div class="internet-right" data-aos="fade-left">
+                <div class="web-facts">
+                  <h4>🌐 First Website</h4>
+                  <p><strong>info.cern.ch</strong> - Still online today!</p>
+                  
+                  <h4>💡 The Idea</h4>
+                  <p>Berners-Lee was frustrated with information loss at CERN. Scientists from around the world needed a better way to share data. His solution combined:</p>
+                  <ul>
+                    <li>HTML (HyperText Markup Language)</li>
+                    <li>HTTP (HyperText Transfer Protocol)</li>
+                    <li>URLs (Uniform Resource Locators)</li>
+                    <li>The first web browser</li>
+                  </ul>
+                </div>
+                
+                <div class="web-impact">
+                  <h4> How It Changed the World</h4>
+                  <p>The Web grew exponentially:</p>
+                  <div class="stats-grid">
+                    <div class="stat">
+                      <span class="stat-number">1991:</span>
+                      <span class="stat-desc">1 website</span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-number">1994:</span>
+                      <span class="stat-desc">~3,000 websites</span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-number">2000:</span>
+                      <span class="stat-desc">17 million websites</span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-number">Today:</span>
+                      <span class="stat-desc">1.8+ billion websites</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <a href="https://youtu.be/IqUE6OL9s4Y?si=FzophvBBYyx6nqQm" target="_blank" class="internet-video-btn">
+                  <span class="video-icon">▶</span>
+                  <span>Watch: The Web's Birth</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <section id="mobile-cloud" class="section mobile-cloud">
+        <div class="cloud-bg">
+          <div class="floating-clouds"></div>
+          <div class="data-center-grid"></div>
+        </div>
+        <div class="container">
+          <h2 data-aos="fade-right">Mobile & Cloud (2000s-2010s)</h2>
+          
+          <div id="mobile-start-screen" class="mobile-start-screen">
+            <div class="smartphone-container">
+              <div class="smartphone" id="smartphone">
+                <div class="smartphone-screen">
+                  <div class="app-icons">
+                    <span class="app">📱</span>
+                    <span class="app">☁️</span>
+                  </div>
+                </div>
+                <div class="home-button"></div>
+              </div>
+              <div class="wifi-signal">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <button class="btn launch-mobile" id="launchMobileBtn">Enter Mobile Era</button>
+            <div class="loading-dots" id="mobileLoading">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          
+          <div id="mobile-info-screen" class="mobile-info-screen hidden">
+            <div class="mobile-showcase">
+              <div class="mobile-left" data-aos="fade-right">
+                <div class="iphone-spotlight">
+                  <div class="iphone-frame">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBVc96ezXatf7BaZTcdHZimR6z07HFNBxi-w&s" alt="iPhone" class="iphone-image">
+                    <div class="iphone-glow"></div>
+                  </div>
+                  <h3 class="iphone-title">iPhone</h3>
+                  <p class="iphone-year">2007</p>
+                </div>
+                
+                <div class="iphone-story">
+                  <h4>The Device That Changed Everything</h4>
+                  <p>On January 9, 2007, Steve Jobs introduced the iPhone, describing it as "an iPod, a phone, and an internet communicator." It revolutionized the mobile industry with its multi-touch interface and lack of physical keyboard.</p>
+                  <p>The App Store launched in 2008, creating an entirely new economy and changing how we use smartphones forever.</p>
+                </div>
+              </div>
+              
+              <div class="mobile-right" data-aos="fade-left">
+                <div class="cloud-facts">
+                  <h4>☁️ Cloud Computing</h4>
+                  <p>The cloud allowed smartphones to become truly powerful:</p>
+                  <ul>
+                    <li>iCloud (2011) - Sync across devices</li>
+                    <li>Google Drive - Cloud storage</li>
+                    <li>Dropbox - File sharing</li>
+                    <li>AWS - Powering the internet</li>
+                  </ul>
+                </div>
+                
+                <div class="mobile-stats">
+                  <h4>📊 Mobile Revolution Stats</h4>
+                  <div class="stats-mobile-grid">
+                    <div class="stat-mobile">
+                      <span class="stat-number">2007:</span>
+                      <span class="stat-desc">First iPhone</span>
+                    </div>
+                    <div class="stat-mobile">
+                      <span class="stat-number">2008:</span>
+                      <span class="stat-desc">App Store (500 apps)</span>
+                    </div>
+                    <div class="stat-mobile">
+                      <span class="stat-number">2010:</span>
+                      <span class="stat-desc">iPad</span>
+                    </div>
+                    <div class="stat-mobile">
+                      <span class="stat-number">2020:</span>
+                      <span class="stat-desc">5.2B mobile users</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="creator-cloud-card">
+                  <h4>👤 Visionary</h4>
+                  <div class="creator-cloud-info">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpav1iIAD5EfBHc-QxBecROMSg5a8jouIN5Q&s" alt="Steve Jobs" class="creator-cloud-img">
+                    <div class="creator-cloud-details">
+                      <h5>Steve Jobs</h5>
+                      <p>1955-2011</p>
+                      <p>Co-founder of Apple</p>
+                      <p>"The people who are crazy enough to think they can change the world are the ones who do."</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <a href="https://youtu.be/x7qPAY9JqE4?si=h6DDi2cDGQEZEHEQ" target="_blank" class="mobile-video-btn">
+                  <span class="video-icon">▶</span>
+                  <span>Watch: iPhone Launch 2007</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai-era" class="section ai-era">
+        <div class="ai-bg">
+          <div class="neural-network-bg"></div>
+          <div class="data-particles"></div>
+        </div>
+        <div class="container">
+          <h2 data-aos="fade-left">Artificial Intelligence (2010s-Now)</h2>
+          
+          <div id="ai-start-screen" class="ai-start-screen">
+            <div class="ai-brain-container">
+              <div class="brain-animation">
+                <div class="brain-wave"></div>
+                <div class="brain-wave"></div>
+                <div class="brain-wave"></div>
+              </div>
+            </div>
+            <button class="btn activate-ai" id="activateAiBtn">Activate AI</button>
+            <div class="ai-loading" id="aiLoading">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          
+          <div id="ai-info-screen" class="ai-info-screen hidden">
+            <div class="ai-showcase">
+              <div class="ai-left" data-aos="fade-right">
+                <div class="robot-container">
+                  <canvas id="ai-robot-canvas" class="ai-robot-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
+                  <div class="robot-glow"></div>
+                </div>
+                <div class="robot-name">
+                  <h3>AI Robot</h3>
+                  <p>Intelligent Machine</p>
+                </div>
+              </div>
+              
+              <div class="ai-right" data-aos="fade-left">
+                <div class="ai-info-card">
+                  <h3 class="ai-title">The Rise of Artificial Intelligence</h3>
+                  <p class="ai-description">
+                    Artificial Intelligence aims to create machines that can think, learn, and adapt like humans. 
+                    The concept dates back to ancient times, but modern AI began in the 1950s with Alan Turing's 
+                    question: "Can machines think?"
+                  </p>
+                </div>
+                
+                <div class="ai-purpose-card">
+                  <h4>🎯 Purpose & Goals</h4>
+                  <ul class="ai-purpose-list">
+                    <li>Automate repetitive tasks</li>
+                    <li>Process vast amounts of data</li>
+                    <li>Make predictions and decisions</li>
+                    <li>Understand human language</li>
+                    <li>Recognize patterns and images</li>
+                    <li>Solve complex problems</li>
+                  </ul>
+                </div>
+                
+                <div class="ai-creator-card" id="aiCreatorCard">
+                  <h4>The Visionary</h4>
+                  <div class="ai-creator-info">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJh49dwZFCJg81ptr5L5PyqLuY7SOzliu33A&s" alt="Geoffrey Hinton" class="ai-creator-img">
+                    <div class="ai-creator-details">
+                      <h5>Geoffrey Hinton</h5>
+                      <p>"Godfather of Deep Learning"</p>
+                      <p>1947 - present</p>
+                      <button class="ai-creator-more" id="aiCreatorMoreBtn">More Info <span>→</span></button>
+                    </div>
+                  </div>
+                </div>
+                
+                <a href="https://youtu.be/ZQbfgfJWbKw?si=dVxYmOy-9Xsx2BBm" target="_blank" class="ai-video-btn">
+                  <span class="video-icon">▶</span>
+                  <span>Watch: The History of AI</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="ai-creator-modal" class="ai-creator-modal hidden">
+          <div class="ai-creator-modal-content">
+            <button class="ai-creator-modal-close">&times;</button>
+            <div class="ai-creator-modal-body">
+              <h3>Geoffrey Hinton</h3>
+              <div class="ai-creator-modal-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJh49dwZFCJg81ptr5L5PyqLuY7SOzliu33A&s" alt="Geoffrey Hinton">
+              </div>
+              <div class="ai-creator-modal-info">
+                <p><strong>Born:</strong> December 6, 1947 (age 77)</p>
+                <p><strong>Nationality:</strong> British-Canadian</p>
+                <p><strong>Known for:</strong> Backpropagation, Boltzmann machines, Deep learning</p>
+                <p><strong>Awards:</strong> Turing Award (2018), Nobel Prize in Physics (2024)</p>
+                <p><strong>Quote:</strong> "Deep learning is going to be able to do everything that humans can do, and maybe more."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <section id="final" class="section final">
+      <div class="container">
+        <div class="timeline-recap" data-aos="zoom-out">1822 · 1945 · 1981 · 2007 · 2025</div>
+        <h2 class="final-message">The Future is Being Written Now</h2>
+        <button class="btn replay" id="replayBtn">Replay Experience</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  <script src="translations.js"></script>
+  <script src="language-handler.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
