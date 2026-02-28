@@ -33,11 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
       subtitle.innerHTML = ''; // Clear typing animation
       const text = getTranslation('hero.subtitle');
       let i = 0;
+      
+      // Зупиняємо попередню анімацію якщо була
+      if (window.typingTimeout) {
+        clearTimeout(window.typingTimeout);
+      }
+      
       function typeWriter() {
         if (i < text.length) {
           subtitle.innerHTML += text.charAt(i);
           i++;
-          setTimeout(typeWriter, 100);
+          window.typingTimeout = setTimeout(typeWriter, 100);
         }
       }
       typeWriter();
@@ -127,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Update info screen creators
-    const eckertName = document.querySelector('.eniac-computer'); // This is just an example
     const creatorsSection = document.querySelector('.eniac-creators');
     if (creatorsSection) {
       const creatorCards = creatorsSection.querySelectorAll('.creator-card');
@@ -176,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (ibmTitle) ibmTitle.textContent = getTranslation('pc.ibmTitle');
     if (ibmDesc) ibmDesc.textContent = getTranslation('pc.ibmDesc');
-    if (ibmInfoBtn) ibmInfoBtn.innerHTML = `<span>${getTranslation('pc.ibmMoreBtn')}</span><span class="info-icon">ℹ️</span>`;
+    if (ibmInfoBtn) ibmInfoBtn.innerHTML = `<span>${getTranslation('pc.ibmMoreBtn')}</span>`;
     if (ibmCreatorName) ibmCreatorName.textContent = getTranslation('pc.ibmCreator');
     if (ibmCreatorDesc) ibmCreatorDesc.textContent = getTranslation('pc.ibmCreatorDesc');
     if (ibmVideoBtn) ibmVideoBtn.innerHTML = `<span class="video-icon">▶</span><span>${getTranslation('pc.ibmVideo')}</span>`;
@@ -191,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (appleTitle) appleTitle.textContent = getTranslation('pc.appleTitle');
     if (appleDesc) appleDesc.textContent = getTranslation('pc.appleDesc');
-    if (appleInfoBtn) appleInfoBtn.innerHTML = `<span>${getTranslation('pc.appleMoreBtn')}</span><span class="info-icon">ℹ️</span>`;
+    if (appleInfoBtn) appleInfoBtn.innerHTML = `<span>${getTranslation('pc.appleMoreBtn')}</span>`;
     if (appleCreatorName) appleCreatorName.textContent = getTranslation('pc.appleCreator');
     if (appleCreatorDesc) appleCreatorDesc.textContent = getTranslation('pc.appleCreatorDesc');
     if (appleVideoBtn) appleVideoBtn.innerHTML = `<span class="video-icon">▶</span><span>${getTranslation('pc.appleVideo')}</span>`;
@@ -398,7 +403,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // Re-attach modal button listener
       const moreBtn = aiCreatorCard.querySelector('#aiCreatorMoreBtn');
       if (moreBtn) {
-        moreBtn.addEventListener('click', () => {
+        // Видаляємо старі слухачі подій
+        const newMoreBtn = moreBtn.cloneNode(true);
+        moreBtn.parentNode.replaceChild(newMoreBtn, moreBtn);
+        
+        newMoreBtn.addEventListener('click', () => {
           const modal = document.getElementById('ai-creator-modal');
           if (modal) modal.classList.remove('hidden');
         });
